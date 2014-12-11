@@ -1,0 +1,38 @@
+{% load static %}
+<html>
+<head>
+	<title>Search Result</title>
+	<link rel="stylesheet" type="text/css" href='{% static "assets/css/default.css" %}'/>
+	<link rel="stylesheet" type="text/css" href='{% static "assets/css/bootstrap.css" %}'/>
+</head>
+<body>
+<div class="container">
+
+
+	{% if response %}
+		<h1 class="text-center">All Pages</h1>
+		<table class="table table-striped">
+			<tr><th>Title</th>
+			    <th>Description</th>
+			    <th>Created</th>
+			</tr>
+		{% for item in response %}
+			<tr><td>{{item.title}}</td>
+			    <td>{{item.desc}}</td>
+			    <td>{{item.created}}</td>
+			</tr>
+
+					
+		
+
+		{% endfor %}
+		</table>
+	{% else %}
+		<h1 class="text-center">No Items </h1>
+	{% endif %}
+
+</div>
+
+
+</body>
+</html>

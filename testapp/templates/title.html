@@ -1,0 +1,26 @@
+{% load static %}
+<html>
+<head>
+<title>repo form </title>
+	<link rel="stylesheet" type="text/css" href='{% static "assets/css/default.css" %}'/>
+	<link rel="stylesheet" type="text/css" href='{% static "assets/css/bootstrap.css" %}'/>
+</head>
+<body>
+<div class="container">
+
+<h1 class="text-center">Add Record</h1>
+<form action = "/testapp/submit/" method ="get">
+  <div class="form-group">
+    <label for="title">Page Title</label>
+    <input type="text" class="form-control" id="title" placeholder="title" name="title">
+  </div>
+  <div class="form-group">
+    <label for="desc">Page Description</label>
+    <textarea class="form-control" rows="3" id="desc" placeholder="description" name="desc"></textarea>
+  </div>
+  <input type="submit" value="Add" class="btn btn-danger col-sm-2" >
+
+</form>
+</div>
+</body>
+</html>
